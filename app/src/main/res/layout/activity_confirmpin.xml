@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ConfirmPinActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#efefef"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/view_widget_toolbar" />
+
+        <com.lyxsh.visademo.Widget.EditLayout
+            android:id="@+id/confirmpin_pin_edit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="40dp"
+            app:inputType="NumberPassword"
+            app:hint="Pin Number"
+            app:src="@drawable/ic_password" />
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/confirmpin_confirm_button"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="CONFIRM"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:qmui_backgroundColor="@color/colorMain"
+            app:qmui_radius="20dp" />
+
+    </LinearLayout>
+
+</FrameLayout>

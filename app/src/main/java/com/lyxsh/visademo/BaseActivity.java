@@ -40,29 +40,25 @@ public abstract class BaseActivity extends AppCompatActivity {
         ActivityManage.getInstance().removeActivity(this);
     }
 
-    private long mExitTime = 0;
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        // screenshot();
-        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-            if ((System.currentTimeMillis() - mExitTime) > 2000) {
-                Toast.makeText(this, "再按一次返回键退出", Toast.LENGTH_SHORT).show(); //Toast.LENGTH_LONG为3.5秒，LENGTH_SHORT为3秒
-                mExitTime = System.currentTimeMillis();
-            } else{
-                ActivityManage.getInstance().finishall();
-            }
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
-
     public BankCardList getbankcard(){
-        BankCardList bankCardList = null;
+        BankCardList bankCardList = new BankCardList();
         String bankcardjson;
-        bankcardjson = sharedPreferences.getString("bankcard","");
+        bankcardjson = sharedPreferences.getString("bankcardlist","");
         if (!bankcardjson.equals("")){
             bankCardList = new Gson().fromJson(bankcardjson,BankCardList.class);
         }
         return bankCardList;
+    }
+
+    public void addbankcard(BankCardList.BankCard bankCard){
+        BankCardList bankCardList = getbankcard();
+        bankCardList.add(bankCard);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("bankcardlist",new Gson().toJson(bankCardList));
+        editor.apply();
+    }
+
+    public void toast(String string){
+        Toast.makeText(this,string,Toast.LENGTH_SHORT).show();
     }
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.CardActivity">
+    tools:context=".Activity.AddCardActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <include layout="@layout/view_widget_toolbar"/>
+        <include layout="@layout/view_widget_toolbar" />
 
         <TextView
             android:layout_width="match_parent"
@@ -24,60 +24,205 @@
             android:textColor="#ee000000"
             android:textSize="18sp" />
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                app:srcCompat="@drawable/ic_visa_logo" />
+            android:layout_weight="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="CVV Code"
-                    android:textColor="#ee000000" />
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/addcard_cvv_edittext"
-                    android:layout_width="60dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:background="@drawable/shape_layout_backgroud_true"
-                    android:inputType="number" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        app:srcCompat="@mipmap/addcard_card_image_1" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="CVV Code"
+                            android:textColor="#ee000000" />
+
+                        <EditText
+                            android:id="@+id/addcard_cvv_edittext"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:inputType="number"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:gravity="right"
+                            android:text="6215550000000168"
+                            android:textColor="#ee000000" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:layout_weight="1"
-                    android:gravity="right"
-                    android:text="6215550000000168"
-                    android:textColor="#ee000000" />
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        app:srcCompat="@mipmap/addcard_card_image_2" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="CVV Code"
+                            android:textColor="#ee000000" />
+
+                        <EditText
+                            android:id="@+id/addcard_cvv_edittext2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:inputType="number"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:gravity="right"
+                            android:text="4616992455547144"
+                            android:textColor="#ee000000" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        app:srcCompat="@mipmap/addcard_card_image_3" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="CVV Code"
+                            android:textColor="#ee000000" />
+
+                        <EditText
+                            android:id="@+id/addcard_cvv_edittext3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:inputType="number"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:gravity="right"
+                            android:text="6032982555547145"
+                            android:textColor="#ee000000" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        app:srcCompat="@mipmap/addcard_card_image_4" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="CVV Code"
+                            android:textColor="#ee000000" />
+
+                        <EditText
+                            android:id="@+id/addcard_cvv_edittext4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:inputType="number"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:gravity="right"
+                            android:text="6215550000000176"
+                            android:textColor="#ee000000" />
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
-
-
-        </LinearLayout>
+        </ScrollView>
 
         <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
             android:id="@+id/addcard_confirm_button"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="40dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:background="@drawable/shape_layout_backgroud_true"
-            android:text="CONFIRM" />
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:text="CONFIRM"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:qmui_backgroundColor="@color/colorMain"
+            app:qmui_radius="20dp" />
 
     </LinearLayout>
 

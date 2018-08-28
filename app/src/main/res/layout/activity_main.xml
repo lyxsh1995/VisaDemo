@@ -12,48 +12,118 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <include layout="@layout/view_widget_toolbar"/>
+        <include layout="@layout/view_widget_toolbar" />
 
-        <ImageView
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginTop="50dp"
-            app:srcCompat="@drawable/ic_visa_main" />
+            android:layout_height="match_parent">
 
-        <com.lyxsh.visademo.Widget.EditLayout
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginBottom="20dp"
-            app:hint="请输入您的手机号"
-            app:src="@drawable/ic_visa_main"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-        <com.lyxsh.visademo.Widget.EditLayout
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginBottom="20dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp">
 
-        <com.lyxsh.visademo.Widget.EditLayout
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginBottom="20dp" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_visa_main" />
 
-        <com.lyxsh.visademo.Widget.EditLayout
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginBottom="20dp"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_jcb_main" />
 
-        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
-            android:id="@+id/main_ok_button"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:text="CONFIRM"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            app:qmui_backgroundColor="@color/colorMain"
-            app:qmui_radius="20dp" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_unionpay_main" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_master_main" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Registration"
+                    android:textColor="#4e4e4e"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="The following information should match your banking record,otherwise please call the customer service before registration."
+                    android:textColor="#4e4e4e"
+                    android:textSize="16sp" />
+
+
+                <com.lyxsh.visademo.Widget.EditLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="20dp"
+                    app:inputType="Number"
+                    app:hint="Mobile Number"
+                    app:src="@drawable/ic_phone" />
+
+                <com.lyxsh.visademo.Widget.EditLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="20dp"
+                    app:hint="Citizen identily"
+                    app:src="@drawable/ic_card"/>
+
+                <com.lyxsh.visademo.Widget.EditLayout
+                    android:id="@+id/main_bithday_editlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="20dp"
+                    app:inputType="Date"
+                    app:hint="Date of birth(YYYY/MM/DD)"
+                    app:src="@drawable/ic_date" />
+
+                <com.lyxsh.visademo.Widget.EditLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="20dp"
+                    app:hint="Email address"
+                    app:src="@drawable/ic_mail"/>
+
+                <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                    android:id="@+id/main_ok_button"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="CONFIRM"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:qmui_backgroundColor="@color/colorMain"
+                    app:qmui_radius="20dp" />
+            </LinearLayout>
+        </ScrollView>
+
     </LinearLayout>
 
 </FrameLayout>

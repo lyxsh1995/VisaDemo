@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import com.lyxsh.visademo.BaseActivity;
 import com.lyxsh.visademo.R;
+import com.lyxsh.visademo.Widget.EditLayout;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -19,6 +20,10 @@ public class PhoneActivity extends BaseActivity {
     Button okbutton;
     @BindView(R.id.phone_cancel_button)
     Button cancelbutton;
+    @BindView(R.id.phone_pin_edit)
+    EditLayout pinedit;
+    @BindView(R.id.phone_confirmpin_edit)
+    EditLayout confirmpinedit;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +31,11 @@ public class PhoneActivity extends BaseActivity {
     }
     @OnClick(R.id.phone_confirm_button)
     public void confirm(){
+        if (pinedit.getText().toString().equals("") || !pinedit.getText().toString().equals(confirmpinedit.getText().toString())){
+            toast("Please check the Pin.");
+            return;
+        }
+        MainActivity.pin = pinedit.getText().toString();
         startActivity(new Intent(this,CardActivity.class));
     }
 

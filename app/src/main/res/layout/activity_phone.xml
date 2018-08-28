@@ -14,55 +14,124 @@
 
         <include layout="@layout/view_widget_toolbar"/>
 
-        <ImageView
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginTop="50dp"
-            app:srcCompat="@drawable/ic_visa_main" />
+            android:layout_height="match_parent">
 
-        <com.lyxsh.visademo.Widget.EditLayout
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginBottom="20dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-        <com.lyxsh.visademo.Widget.EditLayout
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginBottom="20dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp">
 
-        <com.lyxsh.visademo.Widget.EditLayout
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginBottom="20dp" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_visa_main" />
 
-        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
-            android:id="@+id/phone_confirm_button"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:text="CONFIRM"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            app:qmui_backgroundColor="@color/colorMain"
-            app:qmui_radius="20dp" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_jcb_main" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="10dp"
-            android:background="#efefef" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_unionpay_main" />
 
-        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
-            android:id="@+id/phone_cancel_button"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:text="RE-REGISTER"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            app:qmui_backgroundColor="@color/colorPrimary"
-            app:qmui_radius="20dp" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_master_main" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Activation"
+                    android:textColor="#4e4e4e"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Please type activation code that we send to your phone"
+                    android:textColor="#4e4e4e"
+                    android:textSize="16sp" />
+
+                <com.lyxsh.visademo.Widget.EditLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="20dp"
+                    app:hint="Activation Code"
+                    app:src="@drawable/ic_edit" />
+
+                <com.lyxsh.visademo.Widget.EditLayout
+                    android:id="@+id/phone_pin_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="20dp"
+                    app:inputType="NumberPassword"
+                    app:hint="New PIN"
+                    app:src="@drawable/ic_password" />
+
+                <com.lyxsh.visademo.Widget.EditLayout
+                    android:id="@+id/phone_confirmpin_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="20dp"
+                    app:inputType="NumberPassword"
+                    app:hint="Confirm PIN"
+                    app:src="@drawable/ic_password" />
+
+                <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                    android:id="@+id/phone_confirm_button"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="CONFIRM"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:qmui_backgroundColor="@color/colorMain"
+                    app:qmui_radius="20dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:background="#efefef" />
+
+                <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                    android:id="@+id/phone_cancel_button"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="RE-REGISTER"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:qmui_backgroundColor="@color/colorPrimary"
+                    app:qmui_radius="20dp" />
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
 </FrameLayout>

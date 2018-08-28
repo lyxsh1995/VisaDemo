@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/QMUI.Compat.NoActionBar">
-        <activity android:name=".Activity.MainActivity">
+        <activity android:name=".Activity.MainActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,10 +18,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Activity.PhoneActivity"/>
+        <activity android:name=".Activity.PhoneActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <activity android:name=".Activity.CardActivity"/>
         <activity android:name=".Activity.AddCardActivity"/>
-        <activity android:name=".Activity.ConfirmPinActivity"/>
+        <activity android:name=".Activity.ConfirmPinActivity" />
+        <activity android:name=".Activity.WaitActivity"/>
     </application>
 
 </manifest>
